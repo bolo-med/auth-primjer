@@ -1,0 +1,1 @@
+Jednostavan primjer autentifikacije (provjere identiteta), korišćenjem tehnologija Node.js i MongoDB.
