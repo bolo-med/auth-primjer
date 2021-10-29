@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  p.display-4 #{naslov}
+  p.lead Registrujte se, korišćenjem ovog obrasca
+  ul.errors
+    if greske
+      each greska, i in greske
+        li.alert.alert-danger #{greska.msg}
+  form(method='post', action='/users/registracija', enctype='multipart/form-data')
+    .form-group
+      label Ime
+      input.form-control(name='ime', type='text', placeholder='Vaše ime...')
+    .form-group
+      label Korisničko ime
+      input.form-control(name='korisnicko', type='text', placeholder='Vaše korisničko ime...')
+    .form-group
+      label Imejl
+      input.form-control(name='imejl', type='email', placeholder='Vaš imejl...')
+    .form-group
+      label Lozinka
+      input.form-control(name='lozinka', type='password', placeholder='Vaša lozinka...')
+    .form-group
+      label Potvrda lozinke
+      input.form-control(name='lozinka2', type='password', placeholder='Vaša lozinka...')
+    .form-group
+      label Profilna slika
+      input.form-control(name='profilna', type='file')
+    input.btn.btn-info(name='potvrda', type='submit', value='Registruj se')

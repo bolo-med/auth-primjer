@@ -1,0 +1,54 @@
+Sve radimo u cdm-u, sa administratorskim pravima.
+
+--------------------------------------------------------
+
+net start mongodb (pokretanje servera)
+
+net stop mongodb (zaustavljanje servera)
+
+-------------------------------------------------------------------------------
+
+Za ulazak u shell interface, prvo udjemo u folder mongodb/bin, pa otkucamo:
+
+mongo
+
+exit (izlazak iz shella)
+
+-------------------------------------------------------------------------------
+
+db (u kojoj smo bazi)
+
+show dbs (spisak svih baza)
+
+use naziv_baze (otvara navedenu bazu; ako ime baze ne postoji - kreira je)
+
+db.createCollection('radnici'); (kreira kolekciju u bazi u kojoj se nalazimo; kolekcija je nesto kao tabela u relacionim bazama)
+
+show collections (spisak svih kolekcija u bazi)
+
+db.radnici.insert(
+	{ime: 'Dusko Dugousko', 
+	 email: 'dugousko@gnjail.abc', 
+	 odjel: 'racunovodstvo', 
+	 zanimanje: 'knjigovodja'});
+
+(prethodna naredba dodaje red u kolekciju - radnici)
+
+db.radnici.find() (prikazuje zapise kolekcije - radnici)
+
+db.radnici.find().pretty() (f-ja pretty, pregledno formatira zapise)
+
+---------------------------------------------------------------------------------
+
+db.naziv_kolekcije.drop()									(uklanja kolekciju)
+
+db.naziv_kolekcije.deleteOne({ime: "Dusko Dugousko"})		(uklanja prvi zapis, koji za polje ime, ima navedenu vrijednost)
+
+----------------------------------------------------
+
+
+db.naziv_kolekcije.update
+db.naziv_kolekcije.insert
+db.naziv_kolekcije.remove
+
+

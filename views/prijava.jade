@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  p.display-4 #{naslov}
+  p.lead Prijavite se, korišćenjem ovog obrasca
+  form(method='post', action='/users/prijava')
+    .form-group
+      label Korisničko ime
+      input.form-control(name='korisnicko', type='text', placeholder='Vaše korisničko ime...')
+    .form-group
+      label Lozinka
+      input.form-control(name='lozinka', type='password', placeholder='Vaša lozinka...')
+    input.btn.btn-info(name='potvrda', type='submit', value='Prijavi se')
+    
+    

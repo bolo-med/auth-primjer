@@ -1,0 +1,30 @@
+- Kreiramo prazan folder za projekat.
+
+- U Command Promptu (cmd) ili GitBashu, udjemo u folder projekta, pa otkucamo: npm init
+
+- Pokrece se komandom: node index.js (ne radi: npm start)
+
+- Zaustavlja se sa: Ctrl+C
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+- Kreiramo prazan folder za projekat.
+
+- U Command Promptu (cmd) ili GitBashu, udjemo u folder projekta, pa instaliramo express i express-generator (mora opcija -g):
+
+	npm install -g express
+	npm install -g express-generator
+
+- Projekat se inicijalizuje komandom: express
+
+- Po potrebi dodati dependencies u fajl package.json. Npr: body-parser, mongodb, mongoose, connect-flash, multer, passport, bcryptjs...
+  (mozemo i pojedinacno svaki paket da instaliramo, i tada ne treba sledeci korak; 
+   -g instalira za citav racunar, a ne samo za tekuci projekat; 
+   --save registruje paket (upisuje naziv) u dependencies, u fajlu package.json ???)
+
+- Da instaliramo pakete iz package.json, otkucamo komandu: npm install
+
+- projekat se pokrece samo naredbom: npm start
+

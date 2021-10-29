@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Informativne poruke - connect-flash */
+ul.success li {
+  border: 2px solid #006400;
+  padding: 10px;
+  margin: 25px 0 25px 0;
+  border-radius: 10px;
+  background-color: #90EE90;
+  color: #006400;
+  font-weight: bold;
+  list-style: none;
+}
+
+ul.error li {
+  border: 2px solid #8B0000;
+  padding: 10px;
+  margin: 25px 0 25px 0;
+  border-radius: 10px;
+  background-color: #FFE4E1;
+  color: #8B0000;
+  font-weight: bold;
+  list-style: none;
+}
+
+ul li.alert.alert-danger {
+  list-style: none;
+}

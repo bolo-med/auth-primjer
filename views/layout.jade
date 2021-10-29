@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+  body
+    nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+      .container
+        a.navbar-brand(href='/') Autentifikacija
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarCollapse.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item(class = naslov == 'Za članove' ? 'active' : '')
+              a.nav-link(href='/')
+                | Za članove
+                //-span.sr-only (current)
+            if !prijavljen
+              li.nav-item(class = naslov == 'Registracija' ? 'active' : '')
+                a.nav-link(href='/users/registracija')
+                  | Registracija
+              li.nav-item(class = naslov == 'Prijava' ? 'active' : '')
+                a.nav-link(href='/users/prijava')
+                  | Prijava
+          ul.navbar-nav.navbar-right
+            if prijavljen
+              li.nav-item
+                a.nav-link(href='/users/odjava')
+                  | Odjava
+    .container
+      br
+      br
+      !=messages()
+      block content
+    
+    //- jquery mora prije bootstrapa
+    script(src='./javascripts/jquery-3.5.1.slim.min.js')
+    script(src='/javascripts/bootstrap.bundle.min.js')
